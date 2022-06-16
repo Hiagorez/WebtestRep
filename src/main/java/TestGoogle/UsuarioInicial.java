@@ -7,9 +7,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TestGoogle {
+public class UsuarioInicial {
 	@Test
-	public void CriarLogin() {
+	public void CadastrarUsuario() {
 
 		WebDriver driver = new ChromeDriver();
 		driver.get("http://automationpractice.com/index.php");
@@ -23,8 +23,7 @@ public class TestGoogle {
 		driver.findElement(By.id("id_gender1")).click();
 		driver.findElement(By.id("customer_firstname")).click();
 		driver.findElement(By.id("customer_firstname")).sendKeys("Mãe");
-		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		
+				
 		driver.findElement(By.id("customer_lastname")).click();
 		driver.findElement(By.id("customer_lastname")).sendKeys("doAnderson");
 		
@@ -63,6 +62,9 @@ public class TestGoogle {
 		driver.findElement(By.id("phone_mobile")).click();
 		driver.findElement(By.id("phone_mobile")).sendKeys("2145218463");
 		driver.findElement(By.id("submitAccount")).click();
+	
+		
+		driver.close();
 	}
 
 }
